@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Acme&display=swap" rel="stylesheet">
+
+  <title>Form</title>
+  <style type="text/css">
+  span{
+    color: red;
+    display: none;
+  }
+  body{
+    font-family: 'Acme', sans-serif;
+    background: #01b241;
+    margin-top: 50px;
+    margin-bottom: 100px
+  }
+  .btn{
+    color: white;
+    background: #01b241;
+    padding: 6px 35%;
+  }
+  .btn:hover{
+    color: white;
+    background: #009c39;
+  }
+  .form-div{
+    padding: 50px 30px;
+    background: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  h4{
+    color: white;
+    padding: 20px;
+    text-shadow: 1px 1px 2px #000000;
+  }
+  .college_name{
+    text-shadow: 2px 2px 4px #000000;
+    color: white;
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3"></div>
+      <div class="col-md-6">
+        <div class="text-center">
+          <h2 class="college_name">B.K. Birla College Of Arts, Science and Commerce, Kalyan</h2>
+          <h4>Registration</h4>
+        </div>
+        
+        <div class="form-div">
+        <form name="form" onsubmit="return validation()">
+          <div class="form-group">
+            <input type="number" class="form-control" id="prn_number" placeholder="PRN Number" name="prn">
+            <span id="prn">Shouldn't be Empty</span>
+          </div>
+
+          <div class="form-group">
+            <input type="text" class="form-control" id="uname" placeholder="Full Name" name="uname" >
+            <span id="name">Shouldn't be Empty</span>
+          </div>
+
+          <div class="form-group">
+            <select id="gender" name="gender" class="form-control">
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <input type="Number" class="form-control" id="contact" placeholder="Contact" name="contact" >
+            <span id="number">Phone Number Should Be 10 Digits</span>
+          </div>
+
+          <div class="form-group">
+            <input type="email" class="form-control" id="email" placeholder="E-mail" name="email" >
+            <span id="mail">Shouldn't be Empty</span>
+          </div>
+
+          <div class="form-group">
+            <select id="class" name="class" class="form-control"">
+              <option selected disabled="">Select Class</option>
+              <option value="fy">First Year</option>
+              <option value="sy">Second Year</option>
+              <option value="ty">Third YearY</option>
+            </select>
+            <span id="class_year">Please Select Class</span>
+          </div>
+
+          <div class="form-group">
+            <select id="stream" name="stream" class="form-control"">
+              <option selected disabled="">Select Stream</option>
+              <option value="it">Information Technology</option>
+              <option value="cs">Computer Science</option>
+            </select>
+            <span id="stream_cs_it">Please Select Stream</span>
+          </div>
+
+          <div class="form-group">
+            <select id="program" name="program" class="form-control"">
+              <option selected disabled="">Select Program</option>
+              <option value="ug">Under Graduation</option>
+              <option value="pg">Post Graduation</option>
+            </select>
+            <span id="program_ug_pg">Please Select Program</span>
+          </div>
+
+          <div class="form-group">
+            <select id="interest_area" name="interest_area" class="form-control"">
+              <option selected disabled="">Select Interest Area</option>
+              <option value="pls">Placement</option>
+              <option value="ent">Enterprenor</option>
+              <option value="hs">Higher Studies</option>
+              <option value="others">Others</option>
+            </select>
+            <span id="interest_area_p">Please Select Area of Interest</span>
+          </div>
+
+          <div>
+            <div class="row">
+              <div class="col-md-4 col-sm-4 col-xs-4">
+                <div class="form-group">
+                  <input type="number" class="form-control" id="ssc_percent" placeholder="SSC Percent" name="ssc" >
+                  <span id="ssc">Shouldn't be Empty</span>
+                </div>
+              </div>
+              <div class="col-md-4 col-sm-4 col-xs-4">
+                <div class="form-group">
+                  <input type="number" class="form-control" id="hsc_percent" placeholder="HSC Percent" name="hsc" >
+                  <span id="hsc">Shouldn't be Empty</span>
+                </div>
+              </div>
+              <div class="col-md-4 col-sm-4 col-xs-4">
+                <div class="form-group">
+                  <input type="number" class="form-control" id="contact" placeholder="T.Y. (Optional)" name="contact" >
+                  <span id="ty">Shouldn't be Empty</span>
+                </div>
+              </div>
+            </div>        
+          </div>
+
+          <div class="form-group">
+            <select id="hobby" name="hobby" class="form-control"">
+              <option selected disabled="">Select Hobby | Skills</option>
+              <option value="arts">Sports</option>
+              <option value="sports">Arts</option>
+              <option value="others">Others</option>
+            </select>
+            <span id="hobby_skills">Please Select Hobby</span>
+          </div>
+
+          <div class="text-center">
+            <input type="submit" class="btn" name="" value="Register">
+          </div>          
+        </form>
+        </div>
+
+      </div>
+      <div class="col-md-3"></div>
+    </div>
+    
+
+    
+  </div>
+
+
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+  <script type="text/javascript">
+
+    function validation(){
+
+      var prn = $("#prn_number").val();
+      var name = $("#uname").val();
+      var contact = $("#contact").val();
+      var mail = $("#email").val();
+      var class_year = $("#class").val();
+      var stream = $("#stream").val();
+      var program = $("#program").val();
+      var interest_area = $("#interest_area").val();
+      var hobby = $("#hobby").val();
+      
+      var ssc = $("#ssc_percent").val();
+      var hsc = $("#hsc_percent").val();
+
+      if(prn == ""){
+        $("#prn_number").css("border-color", "red");
+        $("#prn").show();
+        return false; 
+      }else{
+        $("#prn_number").css("border-color", "#ced4da");
+        $("#prn").hide();
+      }
+
+      if(name == ""){
+        $("#uname").css("border-color", "red");
+        $("#name").show();
+        return false; 
+      }else{
+        $("#uname").css("border-color", "#ced4da");
+        $("#name").hide();
+      }
+
+
+      if((contact == "") || (contact.length!=10)){
+        $("#contact").css("border-color", "red");
+        $("#number").show();
+        return false; 
+      }
+      else{
+        $("#contact").css("border-color", "#ced4da");
+        $("#number").hide();
+      }
+
+      if(mail == ""){
+        $("#email").css("border-color", "red");
+        $("#mail").show();
+        return false; 
+      }
+      else{
+        $("#email").css("border-color", "#ced4da");
+        $("#mail").hide();
+      }
+
+      if(class_year == null){
+        $("#class").css("border-color", "red");
+        $("#class_year").show();
+        return false; 
+      }
+      else{
+        $("#class").css("border-color", "#ced4da");
+        $("#class_year").hide();
+      }
+
+      if(stream == null){
+        $("#stream").css("border-color", "red");
+        $("#stream_cs_it").show();
+        return false; 
+      }
+      else{
+        $("#stream").css("border-color", "#ced4da");
+        $("#stream_cs_it").hide();
+      }
+
+      if(program == null){
+        $("#program").css("border-color", "red");
+        $("#program_ug_pg").show();
+        return false; 
+      }
+      else{
+        $("#program").css("border-color", "#ced4da");
+        $("#program_ug_pg").hide();
+      }
+      
+
+      if(interest_area == null){
+        $("#interest_area").css("border-color", "red");
+        $("#interest_area_p").show();
+        return false; 
+      }
+      else{
+        $("#interest_area").css("border-color", "#ced4da");
+        $("#interest_area_p").hide();
+      }
+
+      if(ssc == ""){
+        $("#ssc_percent").css("border-color", "red");
+        $("#ssc").show();
+        return false; 
+      }else{
+        $("#ssc_percent").css("border-color", "#ced4da");
+        $("#ssc").hide();
+      }
+
+      if(hsc == ""){
+        $("#hsc_percent").css("border-color", "red");
+        $("#hsc").show();
+        return false; 
+      }else{
+        $("#hsc_percent").css("border-color", "#ced4da");
+        $("#hsc").hide();
+      }
+
+      if(hobby == null){
+        $("#hobby").css("border-color", "red");
+        $("#hobby_skills").show();
+        return false; 
+      }else{
+        return true;
+      }
+
+      
+      
+
+
+
+    }
+
+
+  </script>
+
+</body>
+</html>
